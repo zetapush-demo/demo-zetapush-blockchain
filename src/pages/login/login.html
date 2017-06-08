@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-navbar hideBackButton>
+        <ion-title>
+        Login
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item>
+            <ion-input autocapitalize="none" autocorrect="off" [(ngModel)]="user" type="text" placeholder="username">{{user}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input autocapitalize="none" autocorrect="off" [(ngModel)]="password" type="password" placeholder="password">{{password}}</ion-input>
+        </ion-item>
+    </ion-list>
+
+    <button ion-button full (click)="login()">Login</button>
+    <button id="btnRegister" ion-button (click)="register()">Register</button>
+    
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Beacon certifications
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item-sliding *ngFor="let detection of allBeaconDetected | orderByTimestamp">
+        <ion-item (click)="showItem(detection)" (ionDrag)="slideEvent($event, detection)">
+            <ion-avatar item-left>
+              <img src="assets/beacon.png"/>
+            </ion-avatar>
+            <p>Device : {{detection.device}}</p>
+            <p>Data : {{detection.data}}</p>
+            <p>Distance : {{detection.distance | number : '1.2-2'}} m</p>
+            <p>Date : {{detection.timestamp | date:'short'}}</p>
+            <p>Statut : {{detection.statut}}</p>
+            <p>Description : {{detection.description}}</p>
+        </ion-item>
+        <ion-item-options side="right">
+            <button id="btnDelete" ion-button color="danger" (click)="delete(detection)" >
+            <ion-icon name="trash"></ion-icon>
+            Delete
+            </button>
+        </ion-item-options>
+    </ion-item-sliding>
+    
+    </ion-list>
+
+
+</ion-content>

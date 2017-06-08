@@ -1,0 +1,36 @@
+<ion-header>
+<ion-navbar>
+    <ion-title>
+    Details photo
+    </ion-title>
+</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <img id="image" src="{{parameters.picture}}"/>
+
+    <div id="infos">
+        <h2><b>Informations :</b></h2>
+        <p><b>Latitude : </b>{{parameters.latitude}}</p>
+        <p><b>Longitude : </b>{{parameters.longitude}}</p>
+        <p><b>Tags : </b>{{parameters.tags}}</p>
+        <p><b>Date : </b>{{parameters.timestamp | date:'short'}}</p>
+        <p><b>Status : </b>{{parameters.status}}</p>
+    </div>
+
+    <div *ngIf="receipt" id="receipt">
+
+        <h2><b>Receipt :</b></h2>
+
+        <p><b>Version chainpoint : </b>{{receipt.version}}</p>
+        <p><b>Hash type : </b>{{receipt.hashType}}</p>
+        <p><b>Merkle_root : </b>{{receipt.merkle}}</p>
+        <p><b>Tx_id : </b>{{receipt.txId}}</p>
+        <p><b>Date : </b>{{receipt.timestamp | date:'short'}}</p>
+        <p><b>Target hash : </b>{{receipt.targetHash}}</p>
+        <p><b>Anchor id : </b>{{receipt.anchorId}}</p>
+    </div>
+
+    <button id="button" ion-button (click)="downloadReceipt()">Download Receipt</button>
+</ion-content>

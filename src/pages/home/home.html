@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>
+      <ion-icon id="iconTitle" icon-left name="arrow-back" (click)="goBack()"></ion-icon>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button (click)="goToPhoto()" color="light" class="bigButton" ion-button full>
+    <ion-icon class="icon" name="images"></ion-icon>
+  </button>
+  <button (click)="goToBeacon()" class="bigButton" ion-button full>
+    <ion-icon class="icon" name="pin"></ion-icon>  
+  </button>
+  <button (click)="goToSettings()" color="light" class="bigButton" ion-button full>
+    <ion-icon class="icon" name="settings"></ion-icon>  
+  </button>
+</ion-content>

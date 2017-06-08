@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Beacon settings
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list *ngFor="let beacon of allBeacons" >
+        <ion-item >
+            <ion-card>
+                <ion-card-header>
+                    {{beacon.data}}
+                </ion-card-header>
+                <ion-card-content>
+                    <p>{{beacon.description}}</p>
+                    <button id="btnChange" (click)="change(beacon)" ion-button round>Change</button>
+                </ion-card-content>
+            </ion-card>
+        </ion-item>
+    </ion-list>
+</ion-content>

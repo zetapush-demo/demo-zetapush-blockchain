@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+        Register
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list>
+        <ion-item>
+            <ion-input autocapitalize="none" autocorrect="off" [(ngModel)]="user" type="text" placeholder="username">{{user}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input autocapitalize="none" autocorrect="off" [(ngModel)]="password" type="password" placeholder="password">{{password}}</ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input autocapitalize="none" autocorrect="off" [(ngModel)]="email" type="text" placeholder="email">{{email}}</ion-input>
+        </ion-item>
+    </ion-list>
+
+    <button ion-button full (click)="createUser()">Create user</button>
+
+
+</ion-content>
